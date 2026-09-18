@@ -1,0 +1,14 @@
+{
+  "name": "penaplast-website",
+  "version": "1.0.0",
+  "description": "PENAPLAST — EPS polystyrene foam factory website (liquid glass + 3D experience)",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "check": "for f in js/*.js; do node --check \"$f\" || exit 1; done; echo OK"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}

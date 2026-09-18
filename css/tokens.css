@@ -1,0 +1,76 @@
+/* ============================================================
+   PENAPLAST — Design tokens (dark/light themes)
+   ============================================================ */
+:root {
+  --font-display: "Unbounded", "Manrope", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --blue: #2f7bff;
+  --blue-strong: #1f63e0;
+  --blue-soft: #57a6ff;
+  --cyan: #6ee7ff;
+  --grad-blue: linear-gradient(135deg, #2f7bff 0%, #57a6ff 55%, #6ee7ff 100%);
+
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-full: 999px;
+
+  --header-h: 76px;
+  --container: 1280px;
+
+  --ease-out: cubic-bezier(0.22, 0.9, 0.28, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.44, 1);
+  --dur: 0.45s;
+}
+
+/* ---------- DARK (primary premium experience) ---------- */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-0: #04060b;
+  --bg-1: #080d16;
+  --bg-2: #0c1320;
+  --bg-3: #111a2b;
+  --glass: rgba(12, 19, 32, 0.55);
+  --glass-strong: rgba(10, 16, 27, 0.82);
+  --glass-soft: rgba(255, 255, 255, 0.04);
+  --stroke: rgba(255, 255, 255, 0.09);
+  --stroke-strong: rgba(255, 255, 255, 0.16);
+  --text-1: #f2f6ff;
+  --text-2: #a9b6cf;
+  --text-3: #63708c;
+  --shadow-soft: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+  --shadow-blue: 0 18px 50px -18px rgba(47, 123, 255, 0.55);
+  --media-veil: linear-gradient(180deg, rgba(4, 6, 11, 0) 40%, rgba(4, 6, 11, 0.55) 100%);
+  --hero-shade: linear-gradient(180deg, rgba(4, 6, 11, 0.62) 0%, rgba(4, 6, 11, 0.45) 40%, rgba(4, 6, 11, 0.92) 100%);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --chip-bg: rgba(47, 123, 255, 0.14);
+  --skeleton: rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- LIGHT ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-0: #eef2f9;
+  --bg-1: #f7f9fd;
+  --bg-2: #ffffff;
+  --bg-3: #e8eef7;
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-strong: rgba(255, 255, 255, 0.9);
+  --glass-soft: rgba(31, 99, 224, 0.05);
+  --stroke: rgba(11, 25, 55, 0.1);
+  --stroke-strong: rgba(11, 25, 55, 0.18);
+  --text-1: #0b1526;
+  --text-2: #46536e;
+  --text-3: #7d8aa3;
+  --shadow-soft: 0 24px 60px -28px rgba(20, 45, 100, 0.28);
+  --shadow-blue: 0 18px 50px -18px rgba(47, 123, 255, 0.45);
+  --media-veil: linear-gradient(180deg, rgba(11, 21, 38, 0) 40%, rgba(11, 21, 38, 0.35) 100%);
+  --hero-shade: linear-gradient(180deg, rgba(6, 10, 20, 0.55) 0%, rgba(6, 10, 20, 0.35) 45%, rgba(6, 10, 20, 0.88) 100%);
+  --input-bg: rgba(11, 25, 55, 0.05);
+  --chip-bg: rgba(31, 99, 224, 0.1);
+  --skeleton: rgba(11, 25, 55, 0.07);
+}

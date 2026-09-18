@@ -1,0 +1,119 @@
+/* ============================================================
+   PENAPLAST — Cinematic hero (factory scene, NO 3D model here)
+   ============================================================ */
+.hero {
+  position: relative; min-height: 100svh;
+  display: flex; align-items: center;
+  overflow: hidden; isolation: isolate;
+  padding: calc(var(--header-h) + 40px) 0 90px;
+}
+.hero-media { position: absolute; inset: 0; z-index: -3; background: #04060b; }
+.hero-media img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.08);
+  transition: opacity 2.2s ease-in-out;
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+.hero-media img.active { opacity: 1; }
+.hero-media img:nth-child(2) { animation-delay: -11s; }
+@keyframes kenburns {
+  0% { transform: scale(1.06) translate(0, 0); }
+  50% { transform: scale(1.14) translate(-1.5%, 1%); }
+  100% { transform: scale(1.1) translate(1.5%, -1%); }
+}
+.hero-shade { position: absolute; inset: 0; z-index: -2; background: var(--hero-shade); }
+.hero-scan {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, transparent 0%, rgba(110, 231, 255, 0.05) 48%, transparent 52%, transparent 100%);
+  background-size: 100% 240%;
+  animation: scanMove 9s ease-in-out infinite alternate;
+}
+@keyframes scanMove { from { background-position: 0 0; } to { background-position: 0 100%; } }
+.hero-grid-overlay {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.5;
+  background-image: linear-gradient(rgba(110, 231, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 231, 255, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, black 30%, transparent 75%);
+}
+#heroParticles { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
+
+.hero-content { position: relative; z-index: 2; max-width: var(--container); }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 9px 18px 9px 10px; border-radius: var(--radius-full);
+  background: rgba(10, 18, 32, 0.55); border: 1px solid rgba(110, 231, 255, 0.25);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  font-size: 0.74rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #d7ecff; margin-bottom: 26px;
+}
+.hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84;
+  box-shadow: 0 0 12px #3ddc84; animation: pulse 2.2s ease-in-out infinite; margin-left: 6px; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(0.8); } }
+
+.hero-brand {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 10vw, 7.5rem);
+  font-weight: 800; line-height: 0.98; letter-spacing: 0.02em; margin: 0;
+  color: #fff;
+  text-shadow: 0 6px 60px rgba(47, 123, 255, 0.45);
+}
+.hero-brand .grad {
+  background: linear-gradient(120deg, #6ee7ff 0%, #57a6ff 45%, #2f7bff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3.2vw, 2.2rem);
+  font-weight: 600; line-height: 1.3; margin: 22px 0 0; color: #eaf2ff; max-width: 800px;
+}
+.hero-desc { color: #b9c7de; font-size: clamp(0.98rem, 1.5vw, 1.15rem); max-width: 640px; margin: 18px 0 0; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+.hero-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 44px; }
+.hero-chips .chip {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 11px 18px; border-radius: var(--radius-full);
+  background: rgba(12, 20, 34, 0.5); border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #dbe7fa;
+}
+.hero-chips .chip svg { width: 15px; height: 15px; stroke: var(--cyan); }
+
+.hero-anim { opacity: 0; transform: translateY(34px); animation: heroIn 1s var(--ease-out) forwards; }
+.hero-anim.d1 { animation-delay: 0.1s; } .hero-anim.d2 { animation-delay: 0.22s; }
+.hero-anim.d3 { animation-delay: 0.36s; } .hero-anim.d4 { animation-delay: 0.5s; }
+.hero-anim.d5 { animation-delay: 0.64s; } .hero-anim.d6 { animation-delay: 0.78s; }
+@keyframes heroIn { to { opacity: 1; transform: none; } }
+
+/* Telemetry side card */
+.hero-side {
+  position: absolute; right: 40px; bottom: 120px; z-index: 2;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.tele-card {
+  min-width: 210px; padding: 16px 20px; border-radius: var(--radius-md);
+  background: rgba(10, 17, 30, 0.55); border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  animation: heroIn 1s var(--ease-out) 0.9s backwards;
+}
+.tele-card .t-label { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.24em; color: #8fa3c4; text-transform: uppercase; }
+.tele-card .t-val { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff; margin-top: 4px; }
+.tele-card .t-bar { height: 4px; border-radius: 4px; background: rgba(255, 255, 255, 0.12); margin-top: 10px; overflow: hidden; }
+.tele-card .t-bar i { display: block; height: 100%; border-radius: 4px; background: var(--grad-blue); animation: tbar 3.4s ease-in-out infinite alternate; }
+@keyframes tbar { from { width: 34%; } to { width: 82%; } }
+
+/* Scroll cue */
+.hero-scroll {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: #93a5c4; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase;
+  text-decoration: none;
+}
+.hero-scroll .wheel {
+  width: 24px; height: 38px; border-radius: 14px; border: 2px solid rgba(147, 165, 196, 0.6);
+  display: flex; justify-content: center; padding-top: 7px;
+}
+.hero-scroll .wheel i { width: 4px; height: 8px; border-radius: 4px; background: var(--cyan); animation: wheel 1.8s ease-in-out infinite; }
+@keyframes wheel { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { opacity: 0; } }

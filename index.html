@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>PENAPLAST — Penaplast Zavodi | EPS Issiqlik Izolyatsiyasi</title>
+  <meta name="description" content="PENAPLAST ZAVODI — qurilish, issiqlik izolyatsiyasi va sanoat uchun sifatli EPS penaplast mahsulotlarini ishlab chiqaradi. Oq, qora va maydalangan penaplast." />
+  <meta name="theme-color" content="#04060b" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('penaplast-theme') || 'dark';
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+        var l = localStorage.getItem('penaplast-lang');
+        if (l === 'ru' || l === 'en' || l === 'uz') document.documentElement.lang = l;
+      } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/modals.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script type="importmap">
+    { "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+    } }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#products" data-i18n="hero.cta1">MAHSULOTLARNI KO‘RISH</a>
+  <div class="bg-glow" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="PENAPLAST">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6ee7ff" stroke-width="1.8" stroke-linejoin="round">
+            <path d="M12 2.5 21 7.5v9L12 21.5 3 16.5v-9z"/><path d="M3 7.5l9 5 9-5M12 12.5v9" stroke-opacity=".6"/>
+            <circle cx="12" cy="7.5" r="1.4" fill="#fff" stroke="none"/>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>PENAPLAST</strong><span data-i18n="about.badge">PENAPLAST ZAVODI</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a class="nav-link" href="#home" data-i18n="nav.home">BOSH SAHIFA</a>
+        <a class="nav-link" href="#products" data-i18n="nav.products">MAHSULOTLAR</a>
+        <a class="nav-link" href="#production" data-i18n="nav.production">ISHLAB CHIQARISH</a>
+        <a class="nav-link" href="#experience" data-i18n="nav.exp">3D TAJRIBA</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">BIZ HAQIMIZDA</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">ALOQA</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" id="headerPhone" href="tel:+998995132222">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+          <span>+998 99 513 22 22</span>
+        </a>
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <div class="lang-wrap" id="langWrap">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            <span id="langCurrent">UZ</span>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button data-lang="uz" role="menuitem">O‘zbek <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+            <button data-lang="ru" role="menuitem">Русский <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+            <button data-lang="en" role="menuitem">English <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>
+          </div>
+        </div>
+        <button class="icon-btn" id="themeBtn" aria-label="Theme">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button class="btn btn-primary btn-sm" data-order data-i18n="header.order">BUYURTMA BERISH</button>
+        <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mm-nav">
+      <a href="#home"><span data-i18n="nav.home">BOSH SAHIFA</span><span class="mm-num">01</span></a>
+      <a href="#products"><span data-i18n="nav.products">MAHSULOTLAR</span><span class="mm-num">02</span></a>
+      <a href="#production"><span data-i18n="nav.production">ISHLAB CHIQARISH</span><span class="mm-num">03</span></a>
+      <a href="#experience"><span data-i18n="nav.exp">3D TAJRIBA</span><span class="mm-num">04</span></a>
+      <a href="#about"><span data-i18n="nav.about">BIZ HAQIMIZDA</span><span class="mm-num">05</span></a>
+      <a href="#contact"><span data-i18n="nav.contact">ALOQA</span><span class="mm-num">06</span></a>
+    </nav>
+    <div class="mm-foot">
+      <a class="mm-phone" href="tel:+998995132222">+998 99 513 22 22</a>
+      <button class="btn btn-primary btn-block" data-order data-i18n="header.order">BUYURTMA BERISH</button>
+    </div>
+  </div>
+
+  <!-- ================= SEARCH ================= -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="searchInput" type="text" autocomplete="off" data-i18n-ph="search.ph" placeholder="Mahsulot, zichlik yoki qalinlikni qidiring…" />
+        <button class="icon-btn search-close" id="searchClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <p class="search-hint" data-i18n="search.hint">Masalan: «oq», «qora 15», «maydalangan», «20 sm»</p>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/img/factory-hero-1.jpg" alt="" class="active" fetchpriority="high" />
+        <img src="assets/img/factory-hero-2.jpg" alt="" loading="eager" />
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-scan" aria-hidden="true"></div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <canvas id="heroParticles" aria-hidden="true"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-badge hero-anim d1"><span class="dot"></span><span data-i18n="hero.badge">EPS PENAPLAST ZAVODI</span></div>
+        <h1 class="hero-brand hero-anim d2">PENA<span class="grad">PLAST</span></h1>
+        <p class="hero-title hero-anim d3" data-i18n="hero.title">SIFATLI PENAPLAST. ISHONCHLI QURILISH.</p>
+        <p class="hero-desc hero-anim d4" data-i18n="hero.desc">PENAPLAST ZAVODI — qurilish, issiqlik izolyatsiyasi va sanoat uchun sifatli EPS penaplast mahsulotlarini ishlab chiqaradi.</p>
+        <div class="hero-cta hero-anim d5">
+          <a class="btn btn-ghost btn-lg" href="#products" data-i18n="hero.cta1">MAHSULOTLARNI KO‘RISH</a>
+          <button class="btn btn-primary btn-lg" data-order data-i18n="hero.cta2">BUYURTMA BERISH</button>
+        </div>
+        <div class="hero-chips hero-anim d6">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.chip1">SIFATLI ISHLAB CHIQARISH</span></span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.chip2">ANIQ ZICHLIG</span></span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.chip3">TURLI QALINLIK</span></span>
+        </div>
+      </div>
+
+      <div class="hero-side" aria-hidden="true">
+        <div class="tele-card">
+          <div class="t-label" data-i18n="hero.t1k">ZICHLIG</div>
+          <div class="t-val" data-i18n="hero.t1v">7–20 kg/m³</div>
+          <div class="t-bar"><i></i></div>
+        </div>
+        <div class="tele-card">
+          <div class="t-label" data-i18n="hero.t2k">QALINLIK</div>
+          <div class="t-val" data-i18n="hero.t2v">1–60 sm</div>
+          <div class="t-bar"><i style="animation-delay:-1.6s"></i></div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#products"><span class="wheel"><i></i></span><span data-i18n="hero.scroll">PASTGA</span></a>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-kicker" data-i18n="products.kicker">KATALOG</span>
+          <h2 class="sec-title" data-i18n="products.title">MAHSULOTLAR</h2>
+          <p class="sec-desc" data-i18n="products.desc">Turli zichlik va qalinlikdagi sifatli penaplast mahsulotlari.</p>
+        </div>
+        <div class="filters reveal">
+          <div class="cat-pills" id="catPills" role="tablist">
+            <button class="pill active" data-cat="all" data-i18n="filters.all">BARCHASI</button>
+            <button class="pill" data-cat="white" data-i18n="filters.white">OQ PENAPLAST</button>
+            <button class="pill" data-cat="black" data-i18n="filters.black">QORA PENAPLAST</button>
+            <button class="pill" data-cat="crushed" data-i18n="filters.crushed">MAYDALANGAN PENAPLAST</button>
+          </div>
+          <div class="filter-selects">
+            <select class="select" id="densityFilter" aria-label="Density"></select>
+            <select class="select" id="thicknessFilter" aria-label="Thickness"></select>
+          </div>
+        </div>
+        <div id="productGrid"></div>
+        <p class="products-note reveal" data-i18n="products.note">Narxlar 1 m³ uchun ko‘rsatilgan. Maydalangan penaplast — kg hisobida.</p>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTION ================= -->
+    <section class="section" id="production">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-kicker" data-i18n="flow.kicker">JARAYON</span>
+          <h2 class="sec-title" data-i18n="flow.title">ISHLAB CHIQARISH</h2>
+          <p class="sec-desc" data-i18n="flow.desc">Xomashyodan tayyor mahsulotgacha — penaplast ishlab chiqarishning to‘liq sikli.</p>
+        </div>
+        <div class="flow" id="flow">
+          <div class="flow-track" aria-hidden="true"><div class="flow-progress" id="flowProgress"></div></div>
+          <div id="stages"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY ================= -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="sec-head center reveal">
+          <span class="sec-kicker" data-i18n="why.kicker">AFZALLIKLAR</span>
+          <h2 class="sec-title" data-i18n="why.title">NEGA PENAPLAST?</h2>
+          <p class="sec-desc" data-i18n="why.desc">Zamonaviy zavod, aniq parametrlar va ishonchli mahsulot.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a.6.6 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .7-1c2.5-.8 4.7-2 6.3-3.5a1 1 0 0 1 1.4 0C13.9 3 15.9 4.2 18.4 5a1 1 0 0 1 .6 1Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 class="why-title" data-i18n="why.1.t">SIFATLI MAHSULOT</h3><p class="why-desc" data-i18n="why.1.d">Barqaror sifat nazorati ostida ishlab chiqarilgan EPS.</p></div>
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3 class="why-title" data-i18n="why.2.t">ANIQ ZICHLIG</h3><p class="why-desc" data-i18n="why.2.d">7 dan 20 kg/m³ gacha — aniq belgilangan zichlik.</p></div>
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></div><h3 class="why-title" data-i18n="why.3.t">TURLI QALINLIK</h3><p class="why-desc" data-i18n="why.3.d">1 sm dan 60 sm gacha — har qanday loyiha uchun.</p></div>
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 1 1 4 0Z"/></svg></div><h3 class="why-title" data-i18n="why.4.t">ISSIQLIK IZOLYATSIYASI</h3><p class="why-desc" data-i18n="why.4.d">Binolarni qishda issiq, yozda salqin saqlaydi.</p></div>
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg></div><h3 class="why-title" data-i18n="why.5.t">ZAMONAVIY ISHLAB CHIQARISH</h3><p class="why-desc" data-i18n="why.5.d">Yangilangan uskunalar va to‘liq ishlab chiqarish sikli.</p></div>
+          <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18h-5"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.7a2 2 0 0 0-.6-1.4L18 8.6a2 2 0 0 0-1.4-.6H15"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h3 class="why-title" data-i18n="why.6.t">TEZ YETKAZIB BERISH</h3><p class="why-desc" data-i18n="why.6.d">Buyurtmangiz qisqa muddatda tayyorlanib jo‘natiladi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPLICATIONS ================= -->
+    <section class="section" id="apps">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-kicker" data-i18n="apps.kicker">QO‘LLANILISHI</span>
+          <h2 class="sec-title" data-i18n="apps.title">QAYERDA ISHLATILADI?</h2>
+          <p class="sec-desc" data-i18n="apps.desc">Penaplast — qurilishdan tortib sanoatgacha bo‘lgan keng sohalarda qo‘llaniladi.</p>
+        </div>
+        <div class="apps-grid" id="appsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal-left">
+          <img src="assets/img/about-factory.jpg" alt="PENAPLAST zavodi" loading="lazy" decoding="async" />
+          <div class="about-badge" data-i18n="about.badge">PENAPLAST ZAVODI</div>
+        </div>
+        <div class="about-body reveal-right">
+          <span class="sec-kicker" data-i18n="about.kicker">ZAVOD</span>
+          <h2 class="sec-title" data-i18n="about.title">BIZ HAQIMIZDA</h2>
+          <p class="lead" data-i18n="about.lead">PENAPLAST — qurilish va issiqlik izolyatsiyasi uchun EPS penaplast mahsulotlarini ishlab chiqaruvchi zamonaviy zavod.</p>
+          <p data-i18n="about.p1">Biz oq va qora penaplast plitalar hamda maydalangan penaplast ishlab chiqaramiz. Mahsulotlarimiz uy-joy qurilishi, binolarni izolyatsiyalash va sanoat ehtiyojlari uchun mo‘ljallangan.</p>
+          <ul class="about-points">
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="about.pt1">Oq va qora EPS plitalar</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="about.pt2">Maydalangan penaplast</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="about.pt3">7–20 kg/m³ zichlik</span></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="about.pt4">1–60 sm qalinlik</span></li>
+          </ul>
+          <div class="about-cta">
+            <button class="btn btn-primary" data-order data-i18n="btn.order">BUYURTMA BERISH</button>
+            <a class="btn btn-ghost" href="tel:+998995132222" data-i18n="contact.call">QO‘NG‘IROQ QILISH</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3D EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-kicker" data-i18n="exp.kicker">INTERAKTIV</span>
+          <h2 class="sec-title" data-i18n="exp.title">3D TAJRIBA</h2>
+          <p class="sec-desc" data-i18n="exp.desc">Haqiqiy penaplast donalaridan tashkil topgan 3D modelni aylantiring, yaqinlashtiring va o‘rganing.</p>
+        </div>
+        <div class="exp-grid">
+          <div class="viewer-card reveal-scale" id="viewerCard">
+            <canvas id="epsCanvas"></canvas>
+            <div class="viewer-fallback"><img src="assets/img/eps-white.jpg" alt="EPS penaplast" loading="lazy" /></div>
+            <div class="viewer-loader" id="viewerLoader"><span class="ring"></span><span data-i18n="exp.loading">YUKLANMOQDA</span></div>
+            <div class="v-chip-row">
+              <span class="v-chip blue" data-i18n="exp.eps">EPS</span>
+              <span class="v-chip" data-i18n="exp.brand">PENAPLAST</span>
+            </div>
+            <div class="v-mat-toggle" role="tablist">
+              <button class="active" id="matWhite" data-i18n="exp.white">OQ</button>
+              <button id="matBlack" data-i18n="exp.black">QORA</button>
+            </div>
+            <div class="v-specs">
+              <div class="v-spec"><div class="k" data-i18n="exp.sk">ZICHLIGI</div><div class="v" id="vDensity">15 kg/m³</div></div>
+              <div class="v-spec"><div class="k" data-i18n="exp.st">QALINLIGI</div><div class="v" id="vThickness">5 sm</div></div>
+              <div class="v-spec"><div class="k" data-i18n="exp.ss">O‘LCHAMI</div><div class="v">100 × 100</div></div>
+            </div>
+            <div class="v-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg>
+              <span data-i18n="exp.hint">Aylantiring • Masshtab</span>
+            </div>
+          </div>
+          <div class="exp-side">
+            <div class="macro-card reveal" id="macroCard">
+              <img src="assets/img/macro-beads.jpg" alt="Penaplast donalari" loading="lazy" decoding="async" id="macroImg" />
+              <div class="macro-lens" id="macroLens"></div>
+              <span class="macro-tag" data-i18n="exp.macro">PENAPLAST DONALARI</span>
+              <p class="macro-cap" data-i18n="exp.macroCap">Penaplast mana shunday mayda donachalardan tashkil topgan.</p>
+            </div>
+            <div class="exp-config reveal">
+              <div class="cfg-row">
+                <div class="field"><label for="expDensity" data-i18n="exp.cfgD">Zichlikni tanlang</label><select class="select" id="expDensity"></select></div>
+                <div class="field"><label for="expThickness" data-i18n="exp.cfgT">Qalinlikni tanlang</label><select class="select" id="expThickness"></select></div>
+              </div>
+              <div class="exp-price-row"><span class="k" data-i18n="exp.price">Narxi</span><span class="v" id="expPrice">$67</span></div>
+              <button class="btn btn-primary btn-block" id="expOrder" data-i18n="btn.order">BUYURTMA BERISH</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sec-head center reveal">
+          <span class="sec-kicker" data-i18n="contact.kicker">BOG‘LANISH</span>
+          <h2 class="sec-title" data-i18n="contact.title">ALOQA</h2>
+          <p class="sec-desc" data-i18n="contact.desc">Buyurtma berish yoki savollaringiz uchun biz bilan bog‘laning.</p>
+        </div>
+        <div class="contact-panel reveal-scale">
+          <a class="contact-phone" id="contactPhone" href="tel:+998995132222">+998 99 513 22 22</a>
+          <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="tel:+998995132222" data-i18n="contact.call">QO‘NG‘IROQ QILISH</a>
+            <button class="btn btn-ghost btn-lg" data-order data-i18n="header.order">BUYURTMA BERISH</button>
+            <button class="icon-btn" id="copyPhone" style="width:56px;height:56px" aria-label="Copy phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <a class="c-card reveal" id="tgLink" href="https://t.me/penaplast_uz" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            <span class="c-label" data-i18n="contact.tg">Telegram</span><span class="c-val" id="tgLabel">@penaplast_uz</span>
+          </a>
+          <a class="c-card reveal" id="mailLink" href="mailto:info@penaplast.uz">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <span class="c-label" data-i18n="contact.mail">Email</span><span class="c-val" id="mailLabel">info@penaplast.uz</span>
+          </a>
+          <div class="c-card reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="c-label" data-i18n="contact.addr">Manzil</span><span class="c-val" id="addrLabel">Toshkent sh., O‘zbekiston</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="brand" href="#home" aria-label="PENAPLAST">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6ee7ff" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 21 7.5v9L12 21.5 3 16.5v-9z"/><path d="M3 7.5l9 5 9-5M12 12.5v9" stroke-opacity=".6"/><circle cx="12" cy="7.5" r="1.4" fill="#fff" stroke="none"/></svg>
+          </span>
+          <span class="brand-text"><strong>PENAPLAST</strong><span data-i18n="about.badge">PENAPLAST ZAVODI</span></span>
+        </a>
+        <nav class="footer-nav">
+          <a href="#products" data-i18n="nav.products">MAHSULOTLAR</a>
+          <a href="#production" data-i18n="nav.production">ISHLAB CHIQARISH</a>
+          <a href="#experience" data-i18n="nav.exp">3D TAJRIBA</a>
+          <a href="#about" data-i18n="nav.about">BIZ HAQIMIZDA</a>
+          <a href="#contact" data-i18n="nav.contact">ALOQA</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span id="rights">© 2026 PENAPLAST — Penaplast zavodi. Barcha huquqlar himoyalangan.</span>
+        <a href="tel:+998995132222">+998 99 513 22 22</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAIL MODAL ================= -->
+  <div class="modal" id="detailModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close-detail></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-detail aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <div class="detail-grid">
+        <div class="detail-media" id="detailMedia">
+          <div class="dt-tabs">
+            <button class="active" id="dtPhoto" data-i18n="detail.photo">FOTO</button>
+            <button id="dt3d">3D</button>
+          </div>
+          <img id="detailImg" src="assets/img/eps-white.jpg" alt="Penaplast" />
+          <canvas id="detailCanvas"></canvas>
+        </div>
+        <div class="detail-body">
+          <h3 id="detailName">OQ PENAPLAST</h3>
+          <p class="detail-app" id="detailApp"></p>
+          <div class="detail-opts">
+            <div class="field"><label for="detailDensity" data-i18n="detail.density">Zichligi</label><select class="select" id="detailDensity"></select></div>
+            <div class="field"><label for="detailThickness" data-i18n="detail.thickness">Qalinligi</label><select class="select" id="detailThickness"></select></div>
+          </div>
+          <div class="spec-table" id="detailSpecs"></div>
+          <div class="detail-price-row"><span class="k" data-i18n="exp.price">Narxi</span><span class="v" id="detailPrice">$67</span></div>
+          <button class="btn btn-primary btn-block" id="detailOrder" data-i18n="btn.order">BUYURTMA BERISH</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ORDER MODAL ================= -->
+  <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close-order></div>
+    <div class="modal-card order">
+      <button class="modal-close" data-close-order aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <div id="orderFormWrap">
+        <h3 data-i18n="order.title">BUYURTMA BERISH</h3>
+        <p class="order-sub" data-i18n="order.sub">Ma’lumotlaringizni qoldiring — tez orada siz bilan bog‘lanamiz.</p>
+        <form id="orderForm" novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="oName"><span data-i18n="order.name">Ism</span> <span class="req">*</span></label><input class="input" id="oName" type="text" data-i18n-ph="order.namePh" placeholder="Ismingiz" /><span class="field-err" id="eName" data-i18n="order.errName">Ismingizni kiriting</span></div>
+            <div class="field"><label for="oPhone"><span data-i18n="order.phone">Telefon raqami</span> <span class="req">*</span></label><input class="input" id="oPhone" type="tel" inputmode="tel" placeholder="+998 __ ___ __ __" /><span class="field-err" id="ePhone" data-i18n="order.errPhone">To‘g‘ri telefon raqamini kiriting</span></div>
+            <div class="field full"><label for="oProduct" data-i18n="order.product">Mahsulot</label><select class="select" id="oProduct"></select></div>
+            <div class="field" id="oDensityWrap"><label for="oDensity" data-i18n="order.density">Zichligi</label><select class="select" id="oDensity"></select></div>
+            <div class="field" id="oThicknessWrap"><label for="oThickness" data-i18n="order.thickness">Qalinligi</label><select class="select" id="oThickness"></select></div>
+            <div class="field"><label for="oQty" data-i18n="order.qty">Miqdori</label><input class="input" id="oQty" type="number" min="1" step="1" data-i18n-ph="order.qtyPh" placeholder="Masalan: 10" /></div>
+            <div class="field"><label for="oQtyUnit" data-i18n="order.unit">Birlik</label><input class="input" id="oQtyUnit" type="text" value="m³" readonly tabindex="-1" /></div>
+            <div class="field full"><label for="oComment" data-i18n="order.comment">Izoh</label><textarea class="textarea" id="oComment" data-i18n-ph="order.commentPh" placeholder="Qo‘shimcha ma’lumot (ixtiyoriy)"></textarea></div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit" style="margin-top:20px" data-i18n="order.submit">SO‘ROV YUBORISH</button>
+        </form>
+      </div>
+      <div class="order-success" id="orderSuccess">
+        <div class="success-ring"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h4 data-i18n="order.okT">Rahmat!</h4>
+        <p data-i18n="order.okD">So‘rovingiz qabul qilindi. Tez orada siz bilan bog‘lanamiz.</p>
+        <button class="btn btn-ghost" id="orderAgain" data-i18n="order.again">Yana so‘rov yuborish</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
